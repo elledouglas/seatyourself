@@ -1,24 +1,26 @@
 <h1>Make a reservation </h1>
+######
+<%= link_to("Back to Restaurants", "/restaurants") %> | <%= link_to("Edit", "/restaurants/#{@restaurant.id}/edit") %>
 
 <%= form_for @restaurant do |f| %>
 
-<div class="reservation_form">
+<p>
   <%= f.label :time %>
   <%= f.time_field :time %>
-</div>
+</p>
 
-<div class="reservation_form">
+<p>
   <%= f.label :date %>
   <%= f.date_field :date %>
-</div>
+</p>
 
-<div class="reservation_form">
+<p>
   <%= f.label :party_number %>
   <%= f.number_field :party_number %>
-</div>
+</p>
 
-<div class="submit">
+<p>
   <%= f.submit %>
-</div>
+</p>
 
 <% end %>
