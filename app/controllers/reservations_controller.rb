@@ -14,7 +14,7 @@ class ReservationsController < ApplicationController
     @reservation.no_ppl = params[:reservation][:no_ppl]
     @reservation.date = params[:reservation][:date]
     @reservation.time = params[:reservation][:time]
-  
+
   end
 
   def edit
@@ -23,6 +23,4 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
-end
-
 end

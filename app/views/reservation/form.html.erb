@@ -1,6 +1,6 @@
 <h1>Make a reservation </h1>
 
-<%= form_for @restaurant do |f| %>
+<%= form_for @reservation do |f| %>
 
 <div class="reservation_form">
   <%= f.label :time %>
@@ -13,8 +13,8 @@
 </div>
 
 <div class="reservation_form">
-  <%= f.label :party_number %>
-  <%= f.number_field :party_number %>
+  <%= f.label :no_ppl %>
+  <%= f.number_field :no_ppl %>
 </div>
 
 <div class="submit">
