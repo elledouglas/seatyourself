@@ -13,7 +13,7 @@ Reservation.create!(
   no_ppl: 8,
   date: "09-09-2017",
   time: "730pm",
-  restaurant: pizza_pizza
+  restaurant: pizza_pizza 
 )
 
 swiss_chalet.reservations.create!(

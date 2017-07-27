@@ -1,5 +1,6 @@
 class Reservation < ApplicationRecord
   belongs_to :restaurant
+  belongs_to :user
 
  @counter = Reservation.params[:restaurant_id].no_ppl.sum
 
