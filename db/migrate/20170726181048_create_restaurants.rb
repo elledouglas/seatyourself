@@ -5,11 +5,11 @@ class CreateRestaurants < ActiveRecord::Migration[5.0]
       t.text :address
       t.text :phone
       t.string :cuisine
-      t.string :website
-      t.string :price_rance
-      t.integer :owner_id
+      t.string :price_range
+      t.integer :email
       t.text :description
-      t.text :menu
+      t.text :time_open
+      t.text :time_close
       t.timestamps
     end
   end
