@@ -52,6 +52,7 @@ end
 
   def destroy
     @reservation = Reservation.find(params[:id])
+
     @reservation.destroy
     flash[:alert] = "Reservation Deleted!"
     redirect_to '/restaurants'

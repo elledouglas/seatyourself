@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
     session[:user_id] && User.find(session[:user_id])
   end
 
+  def authenticate
+    unless current_user
+     flash[:alert] = ["MUST be logged in!"]
+     redirect_to root_path
+    end
+  end
+
 end

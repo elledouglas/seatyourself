@@ -1,5 +1,5 @@
 <h1>Make a reservation </h1>
-######
+
 <%= link_to("Back to Restaurants", "/restaurants") %>
 
 <%= form_for @reservation do |f| %>
@@ -14,10 +14,10 @@
   <%= f.date_field :date %>
 </p>
 
-<p>
-  <%= f.label :party_number %>
-  <%= f.number_field :party_number %>
-</p>
+<div class="reservation_form">
+  <%= f.label :no_ppl %>
+  <%= f.number_field :no_ppl %>
+</div>
 
 <p>
   <%= f.submit %>

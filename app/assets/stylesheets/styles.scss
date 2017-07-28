@@ -1,0 +1,108 @@
+html{
+  /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  box-sizing: border-box;
+  background: #F8F9F9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+header {
+margin: 3%;
+}
+
+h1 {
+  font-family: 'Poiret One';
+  font-size: 60px
+}
+
+h2 {
+  margin: 35px 0 10px 0;
+  text-align: center;
+  font-family: 'Poiret One';
+  font-size: 30px;
+}
+
+.header_nav{
+  margin: 30px;
+  float: right;
+  display: inline;
+}
+
+.header_nav a {
+  margin-left: 20px;
+}
+
+.logo {
+  display: inline;
+}
+
+.nav_backdrop {
+  width: 95%;
+  height: 300px;
+  margin: auto;
+  background-image: url("https://images.pexels.com/photos/502633/pexels-photo-502633.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  /*background-image: url("http://gabyspartyevents.com/wp-content/uploads/2017/04/pexels-photo-260922.jpeg");*/
+  /*background-image: url("/home/eiji/Desktop/bitmaker/projects/week6/seatyourself/front/resized.jpg");*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header_span {
+  font-size: 15px;
+}
+
+.reso_nav {
+  position: absolute;
+  margin-top: 227px;
+
+}
+
+.input_box{
+  margin-top: 70%;
+  margin: 20px;
+}
+
+.top_pic_txt {
+  display: inline-block;
+  margin: 1%;
+  max-width: 30%;
+}
+
+.top_pic {
+  width: 100%;
+}
+
+.top_picks {
+  margin: auto;
+  width: 90%
+}
+
+.top_pic_txt > p {
+
+}
+
+.site-nav {
+  text-align: right;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #CCD1D1;
+}
+
+.top_container {
+  margin-bottom: 20cm;
+}
+
+.copy-right {
+  font-family: 'Poiret One';
+  margin: 42px 10px 0 0;
+}
