@@ -21,20 +21,20 @@
     </nav>
   </div>
 
+
   <section class="top_picks">
     <h2>Top picks</h2>
       <div class="top_container">
+
+        <% @restaurants.each do |restaurant| %>
         <div class="top_pic_txt">
-          <img class="top_pic" src="http://assets.epicurious.com/photos/55f72d733c346243461d496e/master/pass/09112015_15minute_pastasauce_tomato.jpg" alt="Restaurant 1">
-          <p><a href="#">Pasta</a></p>
+          <%= link_to  "/restaurants/#{restaurant.id}" do %>
+            <%= image_tag restaurant.website, class: "top_pic" %>
+            <p><%= restaurant.name %></p>
+          <% end%>
         </div>
-        <div class="top_pic_txt">
-          <img class="top_pic" src="http://nourishedkitchen.com/wp-content/uploads/2017/03/Screen-Shot-2017-03-01-at-12.04.08-PM-e1488398828222.png" alt="Restaurant 2">
-          <p><a href="#">Pho</a></p>
-        </div>
-        <div class="top_pic_txt">
-          <img class="top_pic" src="https://media-cdn.tripadvisor.com/media/photo-s/06/24/b6/57/cluny-bistro.jpg" alt="Restaurant 3">
-          <p><a href="#">French</a></p>
-        </div>
+
+        <% end %>
+
       </div>
   </section>
