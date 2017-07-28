@@ -10,11 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170726214316) do
-=======
+
 ActiveRecord::Schema.define(version: 20170728191055) do
->>>>>>> 23d01f3979d5de928541ed01ceccb1dbb6afe99a
 
   create_table "owners", force: :cascade do |t|
     t.datetime "created_at", null: false
