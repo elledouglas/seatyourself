@@ -7,12 +7,6 @@ TORONTO SEATS
 <% end %>
 <% end %>
 
-
-<p><% link_to ' Home', root_path %></p>
-<p> <%= link_to "logout", sessions_path, method: :delete %> </p>
-
-
-
-<p><% link_to ' Home', root_path %></p>
-<p> <% link_to ' New User', new_users_path %></p>
-<p><% link_to ' Login', new_sessions_path %></p>
+<p><%=link_to ' Home', root_path %></p>
+<p><%=link_to ' New User', new_users_path %></p>
+<p><%= link_to ' Login', new_sessions_path %></p>

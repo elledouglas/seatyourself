@@ -2,7 +2,7 @@
 ######
 <%= link_to("Back to Restaurants", "/restaurants") %> | <%= link_to("Edit", "/restaurants/#{@restaurant.id}/edit") %>
 
-<%= form_for @restaurant do |f| %>
+<%= form_for @reservation do |f| %>
 
 <p>
   <%= f.label :time %>
