@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>Seatyourself</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poiret+One|Lora" type="text/css">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <meta charset="utf-8">
   <title>Toronto Seats</title>
 </head>
 <body>
@@ -21,7 +21,6 @@
     <%= link_to ' Login', new_sessions_path %>
     </nav>
   </header>
-
 
   <% if flash.any? %>
 <% flash.each do |key, value| %>
@@ -42,9 +41,12 @@ Hello <%= current_user.email %>
 <p> <% link_to ' New User', new_users_path %></p>
 <p><% link_to ' Login', new_sessions_path %></p>
 
-You must login to see your credits!
+<!-- You must login to see your credits! -->
 <% end %>
 <%= yield %>
 
 </body>
+<footer class="site-nav">
+<div class="copy-right"><p>Copyright &copy; 2017 <=Team Hash-Rocket=></p></div>
+</footer>
 </html>

@@ -10,3 +10,31 @@
 <p><%=link_to ' Home', root_path %></p>
 <p><%=link_to ' New User', new_users_path %></p>
 <p><%= link_to ' Login', new_sessions_path %></p> -->
+
+
+  <div class="nav_backdrop">
+    <nav class="reso_nav">
+      <input class ="input_box" id="input1" type="text" value="No. of guests">
+      <input class ="input_box" id="input1" type="text" value="Time">
+      <input class ="input_box" id="input1" type="text" value="Date">
+      <input class ="input_box" id="input1" type="text" value="Restaurant">
+    </nav>
+  </div>
+
+
+  <section class="top_picks">
+    <h2>Top picks</h2>
+      <div class="top_container">
+
+        <% @restaurants.each do |restaurant| %>
+        <div class="top_pic_txt">
+          <%= link_to  "/restaurants/#{restaurant.id}" do %>
+            <%= image_tag restaurant.website, class: "top_pic" %>
+            <p><%= restaurant.name %></p>
+          <% end%>
+        </div>
+
+        <% end %>
+
+      </div>
+  </section>

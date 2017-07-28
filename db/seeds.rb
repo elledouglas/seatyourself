@@ -22,15 +22,15 @@ swiss_chalet.reservations.create!(
   time: "630pm"
 )
 
-Restaurant.create(
+Restaurant.create!(
   name: 'Macdonalds',
-   address: "Front",
-   phone_number: 555234567,
+   location: "Front",
+   phone: 555234567,
    email: 'ptcruise@gmail.com',
    time_open: 0500,
    time_close: 2300,
    cuisine: 'American',
-   url: 'https://s-media-cache-ak0.pinimg.com/736x/10/27/83/102783442af8c9123d698308fd36cf95.jpg',
+   website: 'https://s-media-cache-ak0.pinimg.com/736x/10/27/83/102783442af8c9123d698308fd36cf95.jpg',
    description: 'Breakfast',
-   price_range: 100
+   price: 100
  )
