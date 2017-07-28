@@ -21,7 +21,6 @@
     </nav>
   </header>
 
-
   <% if flash.any? %>
 <% flash.each do |key, value| %>
 <p class="<%= key %>">
@@ -41,9 +40,12 @@ Hello <%= current_user.email %> , You have <%= current_user.credits %> credits!
 <p> <% link_to ' New User', new_users_path %></p>
 <p><% link_to ' Login', new_sessions_path %></p>
 
-You must login to see your credits!
+<!-- You must login to see your credits! -->
 <% end %>
 <%= yield %>
 
 </body>
+<footer class="site-nav">
+<div class="copy-right"><p>Copyright &copy; 2017 <=Team Hash-Rocket=></p></div>
+</footer>
 </html>
