@@ -2,13 +2,13 @@ class ReservationsController < ApplicationController
 
 
   def index
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    @reservation = Reservation.all
+    # @restaurant = Restaurant.find(params[:restaurant_id])
+    # @reservation = Reservation.all
   end
 
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
-    @reservation = @restaurant.reservations.new
+     @reservation = @restaurant.reservations.new
   end
 
 def create
@@ -22,7 +22,7 @@ def create
   #Added
   if @reservation.save
     flash[:notice] = "Your reservation is confirmed!"
-    redirect_to #####
+    
   else
     flash.now[:error] = "Oops a daisy, please try again :)"
     render :new
