@@ -7,10 +7,10 @@ class SessionsController < ApplicationController
 
     if u && u.authenticate(params[:session][:password])
 
-      session [:user_id] = u.id
+      session[:user_id] = u.id
 
       flash[:notice] = ' Succeful! You are logeed in! '
-      redirect_to_root_url
+      redirect_to root_url
 
     else
       flash.now[:alert] = ' Try again!'
@@ -23,6 +23,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
 
 flash[:notice] = "You're logged out"
-redirect_to_root_url
+redirect_to root_url
     end
 end
