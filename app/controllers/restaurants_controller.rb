@@ -1,4 +1,6 @@
-class RestaurantsController < ActionController::Base
+class RestaurantsController < ApplicationController
+
+  before_action :authenticate, only: [:edit, :update, :create, :destroy]
 
 def index
   @restaurants = Restaurant.all
@@ -8,9 +10,7 @@ def new
   @restaurants = Restaurant.new
 end
 
-def current_user
-  session[:user_id] && User.find(session[:user_id])
-end
+
 def create
    @restaurant = Restaurant.create(restaurant_params)
    if @restaurant.save
@@ -23,11 +23,7 @@ def create
  end
 
 def show
-  unless current_user
-   flash[:alert] = ["MUST be logged in!"]
-   redirect_to root_path
-   return
-end
+
 @restaurant = Restaurant.find(params[:id])
 end
 
