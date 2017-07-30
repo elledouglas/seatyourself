@@ -1,10 +1,10 @@
 class RestaurantsController < ApplicationController
 
-  before_action :authenticate, only: [:edit, :update, :create, :destroy]
+  # before_action :authenticate, only: [:edit, :update, :create, :destroy]
 
-def index
-  @restaurants = Restaurant.all
-end
+# def index
+#   @restaurants = Restaurant.all
+# end
 
 def new
   @restaurants = Restaurant.new

@@ -1,6 +1,6 @@
 <h1>Sign Up!</h1>
 
-<% if @user.errors.any?  %>
+<!-- <% if @user.errors.any?  %>
   <ul>
     <% @user.errors.full_messages.each do |m| %>
     <li><%= m %> </li>
@@ -8,7 +8,7 @@
   </ul>
 <% end %>
 
-<%= form_for @user do |f| %>
+<%= form_for :user do |f| %>
 
   <div class='field'>
     <%=f.label :email %>
@@ -27,4 +27,4 @@
 
   <%= f.submit 'Sign up!' %>
 
-<% end %>
+<% end %> -->

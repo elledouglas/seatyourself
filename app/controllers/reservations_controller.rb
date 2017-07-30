@@ -7,22 +7,19 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @restaurant = Restaurant.find(params[:restaurant_id])
-     @reservation = @restaurant.reservations.new
+
   end
 
 def create
   @reservation = Reservation.new
-  @reservation.name = params[:restaurant][:name]
-  @reservation.description = params[:reservation][:description]
   @reservation.no_ppl = params[:reservation][:no_ppl]
   @reservation.date = params[:reservation][:date]
   @reservation.time = params[:reservation][:time]
 
-  #Added
+
   if @reservation.save
     flash[:notice] = "Your reservation is confirmed!"
-    
+
   else
     flash.now[:error] = "Oops a daisy, please try again :)"
     render :new
@@ -37,7 +34,7 @@ def show
   @reservation = Reservation.find(params[:id])
 end
 
-#ADDED at night
+
 
 def update
   @reservation = Reservation.find(params[:reservation_id])
@@ -58,11 +55,6 @@ end
     redirect_to '/restaurants'
   end
 
-  private
-
-  def reservation_params
-    params.required(:reservation).permit(:time, :date, :no_ppl)
-  end
-
+  
 
 end

@@ -34,3 +34,9 @@ Restaurant.create!(
    description: 'Breakfast',
    price: 100
  )
+
+User.create(
+email: "kathleen@hotamil.com"
+password: "yoyo"
+password_confirmation: "yoyo"
+)

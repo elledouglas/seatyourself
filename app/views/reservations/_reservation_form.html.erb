@@ -1,8 +1,8 @@
 <h1>Make a reservation </h1>
 
-<%= link_to 'Book Now', new_restaurant_reservation_path(@restaurant.id) %>
+<%= link_to 'Book Now', restaurant_reservations_path %>
 
-<%= form_for @reservation  do |f| %>
+<%= form_for :reservation do |f| %>
 
 <div class="reservation_form">
   <%= f.label :time %>
