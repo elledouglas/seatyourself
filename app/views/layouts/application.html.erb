@@ -15,8 +15,10 @@
   <header>
    <h1 class="logo">Toronto Seats | <span class="header_span">Toronto, ON.</span></h1>
     <nav class="header_nav">
-      <p> <%= link_to ' Sign up ', new_users_path %> </p>
-      <p> <%= link_to ' Login', new_sessions_path %> </p>
+
+    <%=link_to 'Home', root_path %>
+    <%=link_to ' New User', new_users_path %>
+    <%= link_to ' Login', new_sessions_path %>
     </nav>
   </header>
 
@@ -32,7 +34,7 @@
 <p><% link_to ' Home', root_path %></p>
 <p> <%= link_to "logout", sessions_path, method: :delete %> </p>
 
-Hello <%= current_user.email %> , You have <%= current_user.credits %> credits!
+Hello <%= current_user.email %>
 <% else %>
 
 <p><% link_to ' Home', root_path %></p>

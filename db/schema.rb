@@ -34,7 +34,11 @@ ActiveRecord::Schema.define(version: 20170728191055) do
     t.string   "name"
     t.text     "phone"
     t.string   "cuisine"
+    t.string   "price_range"
+    t.integer  "email"
     t.text     "description"
+    t.text     "time_open"
+    t.text     "time_close"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "price"

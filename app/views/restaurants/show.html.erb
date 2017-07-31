@@ -1,9 +1,8 @@
-<h2><%= @restaurant.name %></h2>
+<h1>SHOW PAGE</h1>
 
-<img src'<%= @restaurant.website %>'>
-<%= @restaurant.description %>
-
+<h3>Name: <%= @restaurant.name %></h3>
 <h3>Address: <%= @restaurant.location %></h3>
 
-
-<%= link_to 'Book Now', new_restaurant_reservation_path(@restaurant.id) %>
+<p><% link_to ' Home', root_path %></p>
+<p><% link_to ' New User', new_users_path %></p>
+<p><% link_to ' Login', new_sessions_path %></p>
