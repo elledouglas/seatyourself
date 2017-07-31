@@ -7,7 +7,7 @@ def index
 end
 
 def new
-  @restaurants = Restaurant.new
+  @restaurant = Restaurant.new
 end
 
 

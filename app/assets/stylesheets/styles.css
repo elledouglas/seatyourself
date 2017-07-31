@@ -30,12 +30,20 @@ h2 {
 .header_nav{
   margin: 30px;
   float: right;
+
+}
+
+.header_nav p {
+  margin-left: 20px;
   display: inline;
 }
 
-.header_nav a {
+.header_nav p a {
   margin-left: 20px;
+  display: inline;
+  text-decoration: none;
 }
+
 
 .logo {
   display: inline;
