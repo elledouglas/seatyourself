@@ -41,13 +41,13 @@ end
     @user.password_confirmation = params[:user][:password_confirmation]
 
 end
-    if @user.save
-      flash[:notice] = 'Account Succefully created'
-      redirect_to restaurant_path
-    else
-      flash.now[:error] = 'Sorry Try Again'
-      render :new
-     end
+    # if @user.save
+    #   flash[:notice] = 'Account Succefully created'
+    #   redirect_to new_users_path
+    # else
+    #   flash.now[:error] = 'Sorry Try Again'
+    #   render :new
+    #  end
 
     #  def user_params
     #      params.require(:user).permit(:email, :password, :password_confirmation)
