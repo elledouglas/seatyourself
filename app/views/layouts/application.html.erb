@@ -16,10 +16,17 @@
    <h1 class="logo">Toronto Seats | <span class="header_span">Toronto, ON.</span></h1>
     <nav class="header_nav">
 
-    <%=link_to 'Home', root_path %>
+      <% if current_user %>
+  <%= link_to "Logout", sessions_path("current"), method: :delete %>
+<% else %>
+  <%= link_to "Login", new_sessions_path %> |
+  <%= link_to "Signup", new_users_path %>
+<% end %>
+
+    <!-- <%=link_to 'Home', root_path %>
     <%=link_to ' New User', new_users_path %>
     <%= link_to ' Login', new_sessions_path %>
-    </nav>
+    </nav> -->
   </header>
 
   <% if flash.any? %>

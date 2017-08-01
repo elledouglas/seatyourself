@@ -1,10 +1,10 @@
 class RestaurantsController < ApplicationController
 
-  # before_action :authenticate, only: [:edit, :update, :create, :destroy]
+  before_action :authenticate, only: [:edit, :update, :create, :destroy]
 
-# def index
-#   @restaurants = Restaurant.all
-# end
+  def index
+    @restaurants = Restaurant.all
+  end
 
 def new
   @restaurant = Restaurant.new
@@ -13,9 +13,10 @@ end
 
 def create
    @restaurant = Restaurant.create(restaurant_params)
+   @restaurant.user_id = session[:id]
    if @restaurant.save
      flash[:notice] = "Saved!"
-     redirect_to restaurant_path
+     redirect_to root_path
    else
      flash.now[:error] = "Please try again!"
      render :new
@@ -56,9 +57,8 @@ end
 end
 
 def restaurant_params
-  params.required(:restaurant).permit(:name, :address,
-  :phone, :cuisine, :price_range, :email,
-  :description, :time_open, :time_close)
+  params.required(:restaurant).permit(:name, :phone, :cuisine, :description,
+  :price, :location, :website)
 end
 
 end

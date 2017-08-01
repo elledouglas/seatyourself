@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728191055) do
+ActiveRecord::Schema.define(version: 20170801034631) do
 
   create_table "owners", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,31 +19,28 @@ ActiveRecord::Schema.define(version: 20170728191055) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "no_ppl"
-    t.text     "description"
     t.string   "date"
     t.string   "time"
+    t.integer  "user_id"
+    t.integer  "restaurant_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "restaurant_id"
-    t.integer  "users_id"
     t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
-    t.index ["users_id"], name: "index_reservations_on_users_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
-    t.text     "phone"
+    t.string   "phone"
     t.string   "cuisine"
-    t.string   "price_range"
-    t.integer  "email"
     t.text     "description"
-    t.text     "time_open"
-    t.text     "time_close"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.string   "price"
     t.string   "location"
     t.string   "website"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

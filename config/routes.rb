@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resource :users, only: %i(create new) #same as [:create, :new]
   resource :sessions, only: %i(create new destroy)
 
-  root to: 'restaurants#index'
+  root 'restaurants#index'
 
 end
