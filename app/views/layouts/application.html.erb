@@ -16,6 +16,7 @@
    <h1 class="logo">Toronto Seats | <span class="header_span">Toronto, ON.</span></h1>
     <nav class="header_nav">
 
+<% if current_user %>
     <%=link_to 'Home', root_path %>
     <%=link_to ' New User', new_users_path %>
     <%= link_to ' Login', new_sessions_path %>
@@ -34,7 +35,7 @@
 <p><% link_to ' Home', root_path %></p>
 <p> <%= link_to "logout", sessions_path, method: :delete %> </p>
 
-Hello <%= current_user.email %> 
+Hello <%= current_user.email %>
 <% else %>
 
 <p><% link_to ' Home', root_path %></p>
@@ -50,3 +51,4 @@ Hello <%= current_user.email %>
 <div class="copy-right"><p>Copyright &copy; 2017 <=Team Hash-Rocket=></p></div>
 </footer>
 </html>
+<% end %>

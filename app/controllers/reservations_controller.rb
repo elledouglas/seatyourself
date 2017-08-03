@@ -11,10 +11,11 @@ class ReservationsController < ApplicationController
   end
 
 def create
-  @reservation = Reservation.new
-  @reservation.no_ppl = params[:reservation][:no_ppl]
-  @reservation.date = params[:reservation][:date]
-  @reservation.time = params[:reservation][:time]
+  @reservation = Reservation.new(
+  @reservation.no_ppl = params[:reservation][:no_ppl],
+  @reservation.date = params[:reservation][:date],
+  @reservation.time = params[:reservation][:time])
+  # user: current_user
 
 
   if @reservation.save
@@ -24,7 +25,7 @@ def create
     flash.now[:error] = "Oops a daisy, please try again :)"
     render :new
   end
-end
+
 
 def edit
   @reservation = Reservation.find(params[:id])
@@ -46,6 +47,7 @@ def update
     redirect_back_or_to @reservation
   end
 end
+end
 
   def destroy
     @reservation = Reservation.find(params[:id])
@@ -55,6 +57,5 @@ end
     redirect_to '/restaurants'
   end
 
-  
 
 end
