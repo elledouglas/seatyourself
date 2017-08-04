@@ -2,6 +2,9 @@ class Reservation < ApplicationRecord
   belongs_to :restaurant
   belongs_to :user
 
+end
+
+
 #
 #
 #   def max_capacity?
@@ -22,4 +25,3 @@ class Reservation < ApplicationRecord
 #  end
 #
 #
-  end

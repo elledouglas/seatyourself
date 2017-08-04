@@ -1,4 +1,43 @@
-<h1> Restaurant Owner Page </h1>
-<h3> Create a new restaurant </h3>
+<!-- TORONTO SEATS -->
+<!-- <% if flash.any? %>
+  <% flash.each do |key, value| %>
+    <p class="<%= key %>">
+   <%= value %>
+   </p>
+  <% end %>
+<% end %>
+<p><%=link_to ' Home', root_path %></p>
+<p><%=link_to ' New User', new_users_path %></p>
+<p><%= link_to ' Login', new_sessions_path %></p> -->
 
+<<<<<<< HEAD
 <%= render 'restaurant_form' %>
+=======
+
+  <div class="nav_backdrop">
+    <nav class="reso_nav">
+      <input class ="input_box" id="input1" type="text" value="No. of guests">
+      <input class ="input_box" id="input1" type="text" value="Time">
+      <input class ="input_box" id="input1" type="text" value="Date">
+      <input class ="input_box" id="input1" type="text" value="Restaurant">
+    </nav>
+  </div>
+
+
+  <section class="top_picks">
+    <h2>Top picks</h2>
+      <div class="top_container">
+
+        <% @restaurants.each do |restaurant| %>
+        <div class="top_pic_txt">
+          <%= link_to  "/restaurants/#{restaurant.id}" do %>
+            
+            <p><%= restaurant.name %></p>
+          <% end%>
+        </div>
+
+        <% end %>
+
+      </div>
+  </section>
+>>>>>>> 75169459d513b89e09a42982385340562914d524
